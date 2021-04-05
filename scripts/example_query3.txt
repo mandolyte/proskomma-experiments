@@ -1,0 +1,24 @@
+{
+    processor
+    packageVersion
+    docSets { 
+        selectors {
+            key value
+        }
+    documents {
+        mainSequence {
+            blocks(withScopes:["chapter/1", "verse/1"]) {
+                bs { payload }
+              text(normalizeSpace: true)
+              items {
+                type subType payload
+              }
+            }
+        }
+    }
+}
+}
+#         cv (chapter:"1" verses:["1","2","3"]) { scopeLabels,  text }
+#tokens {
+#    type subType payload
+#  }
