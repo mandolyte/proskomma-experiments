@@ -1,0 +1,11 @@
+{
+    processor
+    packageVersion
+    documents {
+        mainSequence {
+            blocks(withScopes:["chapter/1", "verse/1"]) {
+              text(normalizeSpace: true)
+            }
+        }
+    }
+}
