@@ -104,7 +104,7 @@ pk.gqlQuery(query)
 		const serialized = pk.serializeSuccinct( results.data.docSets[0].id );
 		console.log("Serialization time:", Math.floor((Date.now() - sstart) / 1000));
 		const jstart = Date.now();
-		const stringifySerialization = JSON.stringify(serialized, null, 2);
+		const stringifySerialization = JSON.stringify(serialized);
 		console.log("Stringify time:", Math.floor((Date.now() - jstart) / 1000));
 		const wstart = Date.now();
 		fse.writeFileSync('en_ult-succinct.json', stringifySerialization);
